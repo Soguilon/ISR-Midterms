@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISR Midterm Exam</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <main class="app">
+    <section id="startScreen" class="screen glass">
+      <div class="badge">ISR • MIDTERM</div>
+      <h1>ISR Midterm Exam</h1>
+      <p>36 questions • Multiple Choice</p>
+      <p class="sub">Each question has one correct answer. Select your answer, then continue.</p>
+      <button id="startBtn" class="btn primary">Start Exam</button>
+    </section>
+
+    <section id="examScreen" class="screen glass hidden">
+      <header class="examHeader">
+        <div>
+          <div class="badge">ISR • MIDTERM</div>
+          <h2>Multiple-Choice Exam</h2>
+        </div>
+        <div id="progress" class="progress">Question 1 of 36</div>
+      </header>
+      <div class="progressTrack"><div id="progressBar"></div></div>
+      <div id="questionNumber" class="questionNumber"></div>
+      <h3 id="questionText"></h3>
+      <div id="choices" class="choices"></div>
+      <div class="actions">
+        <button id="nextBtn" class="btn primary" disabled>Next Question</button>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="screen glass hidden">
+      <div class="badge">EXAM COMPLETE</div>
+      <h1>Final Results</h1>
+      <div class="scoreCircle"><span id="score">0/36</span></div>
+      <div class="resultGrid">
+        <div><strong id="percentage">0%</strong><span>Percentage</span></div>
+        <div><strong id="correct">0</strong><span>Correct</span></div>
+        <div><strong id="incorrect">0</strong><span>Incorrect</span></div>
+      </div>
+      <button id="restartBtn" class="btn primary">Take Again</button>
+    </section>
+  </main>
+  <script src="javascript.js"></script>
+</body>
+</html>
